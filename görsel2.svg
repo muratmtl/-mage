@@ -1,20 +1,58 @@
-<svg width="200" height="280" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
-  <!-- Bombe kapak (üst) -->
-  <path d="M30,60 Q100,20 170,60" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
-  <!-- Tank gövdesi -->
-  <rect x="30" y="60" width="140" height="160" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
-  <!-- Alt elips (taban) -->
-  <ellipse cx="100" cy="220" rx="70" ry="20" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
+  <!-- Üst bombe kapak -->
+  <path d="M30,60 Q100,20 170,60" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2" />
 
-  <!-- Seviye çizgileri ve etiketler -->
-  <g stroke="#000000" stroke-width="1" font-family="Arial" font-size="14" fill="#000000">
-    <line x1="30" y1="220" x2="170" y2="220"/><text x="10" y="224">0</text>
-    <line x1="30" y1="193" x2="170" y2="193"/><text x="10" y="197">1</text>
-    <line x1="30" y1="166" x2="170" y2="166"/><text x="10" y="170">2</text>
-    <line x1="30" y1="139" x2="170" y2="139"/><text x="10" y="143">3</text>
-    <line x1="30" y1="112" x2="170" y2="112"/><text x="10" y="116">4</text>
-    <line x1="30" y1="85" x2="170" y2="85"/><text x="10" y="89">5</text>
-    <line x1="30" y1="60" x2="170" y2="60"/><text x="10" y="64">6</text>
+  <!-- Gövde -->
+  <rect x="30" y="60" width="140" height="160" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2" />
+
+  <!-- Taban elips -->
+  <ellipse cx="100" cy="220" rx="70" ry="20" fill="#e0e0e0" stroke="#bdbdbd" stroke-width="2" />
+
+  <!-- Skala çizgileri ve etiketleri (capacity = 6 varsayımıyla) -->
+  <!-- y: 220, 193.333, 166.667, 140, 113.333, 86.667, 60 -->
+  <g font-family="Arial" font-size="14">
+    <line x1="30" x2="170" y1="220" y2="220" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="224" fill="#1976d2" font-weight="bold">0</text>
+
+    <line x1="30" x2="170" y1="193.333" y2="193.333" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="197.333" fill="#bdbdbd">1</text>
+
+    <line x1="30" x2="170" y1="166.667" y2="166.667" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="170.667" fill="#bdbdbd">2</text>
+
+    <line x1="30" x2="170" y1="140" y2="140" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="144" fill="#bdbdbd">3</text>
+
+    <line x1="30" x2="170" y1="113.333" y2="113.333" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="117.333" fill="#bdbdbd">4</text>
+
+    <line x1="30" x2="170" y1="86.667" y2="86.667" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="90.667" fill="#bdbdbd">5</text>
+
+    <line x1="30" x2="170" y1="60" y2="60" stroke="#bdbdbd" stroke-width="1"/>
+    <text x="10" y="64" fill="#bdbdbd">6</text>
   </g>
 
+  <!-- DOLULUK ALANI: Kodun değiştireceği kısım -->
+  <!-- Başlangıçta 0 yükseklikte (boş). Level/capacity'ye göre y/height güncellenir. -->
+  <rect id="fill" x="30" y="220" width="140" height="0" fill="#64b5f6" opacity="0.6" />
+
+  <!-- Dalga yolu (kod dinamik dolduruyor) -->
+  <path id="tankWavePath" fill="#64b5f6" opacity="0.8" d=""/>
+
+  <!-- Ortadaki daire ve değer -->
+  <circle cx="100" cy="140" r="28" fill="#fff" stroke="#b71c1c" stroke-width="4"/>
+  <text x="100" y="147" text-anchor="middle" font-size="16" font-family="Arial" fill="#222" font-weight="bold">
+    0,00 h
+  </text>
+
+  <!-- Başlık (kodda titleNode olarak güncellenebilir) -->
+  <text id="title" x="100" y="30" text-anchor="middle" font-size="22" font-family="Arial" fill="#b71c1c" font-weight="bold">
+    Tank
+  </text>
+
+  <!-- Alt metin (malzeme/ içerik adı istersen kullan) -->
+  <text x="100" y="265" text-anchor="middle" font-size="20" font-family="Arial" fill="#222" font-weight="bold">
+    <!-- Material Name -->
+  </text>
 </svg>
