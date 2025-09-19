@@ -1,16 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="200" height="280" viewBox="0 0 200 280">
-  <!-- Üst bombe kapak -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 280">
+  <!-- Sadece dış görünüş (stroke), istersen bunlar kalabilir -->
   <path d="M30,60 Q100,20 170,60" fill="none" stroke="#bdbdbd" stroke-width="2"/>
-
-  <!-- Gövde -->
-  <rect x="30" y="60" width="140" height="160" fill="none" stroke="#bdbdbd" stroke-width="2"/>
-
-  <!-- Taban elips -->
   <ellipse cx="100" cy="220" rx="70" ry="20" fill="none" stroke="#bdbdbd" stroke-width="2"/>
 
-  <!-- DOLULUK alanı (kod burayı dolduracak) -->
-  <rect id="fill" x="30" y="220" width="140" height="0" fill="#64b5f6" opacity="0.6"/>
-
-  <!-- Dalga yolu (kod dolduracak) -->
-  <path id="tankWavePath" fill="#64b5f6" opacity="0.8" d=""/>
+  <!-- İÇ HACİM: Kapalı şekil, id=container (buraya göre dolum yapılacak) -->
+  <rect id="container" x="30" y="60" width="140" height="160" rx="16" ry="16"
+        fill="none" stroke="#bdbdbd" stroke-width="2"/>
 </svg>
+
+
