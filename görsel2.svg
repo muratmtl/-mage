@@ -1,0 +1,20 @@
+<svg width="200" height="280" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+  <!-- Bombe kapak (üst) -->
+  <path d="M30,60 Q100,20 170,60" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
+  <!-- Tank gövdesi -->
+  <rect x="30" y="60" width="140" height="160" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
+  <!-- Alt elips (taban) -->
+  <ellipse cx="100" cy="220" rx="70" ry="20" fill="#808080" stroke="#4e4e4e" stroke-width="2"/>
+
+  <!-- Seviye çizgileri ve etiketler -->
+  <g stroke="#000000" stroke-width="1" font-family="Arial" font-size="14" fill="#000000">
+    <line x1="30" y1="220" x2="170" y2="220"/><text x="10" y="224">0</text>
+    <line x1="30" y1="193" x2="170" y2="193"/><text x="10" y="197">1</text>
+    <line x1="30" y1="166" x2="170" y2="166"/><text x="10" y="170">2</text>
+    <line x1="30" y1="139" x2="170" y2="139"/><text x="10" y="143">3</text>
+    <line x1="30" y1="112" x2="170" y2="112"/><text x="10" y="116">4</text>
+    <line x1="30" y1="85" x2="170" y2="85"/><text x="10" y="89">5</text>
+    <line x1="30" y1="60" x2="170" y2="60"/><text x="10" y="64">6</text>
+  </g>
+
+</svg>
